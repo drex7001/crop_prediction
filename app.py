@@ -12,7 +12,7 @@ model = pickle.load(open('models/model.pkl', 'rb'))
 
 
 @app.route("/")
-def hello_world():
+def home():
     # pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'cult1.jpg')
     # return render_template('index.html', bg_image=pic1)
     return render_template('index.html')
