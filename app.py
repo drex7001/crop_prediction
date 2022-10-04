@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from flask import Flask, requests, render_template
+from flask import Flask, request, render_template
 import pickle
 import os
 from flask import jsonify
@@ -30,7 +30,7 @@ def home():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    json_ = requests.json
+    json_ = request.json
     query_df = pd.DataFrame(json_)
     prediction = model.predict(query_df)
     return jsonify({"Prediction": list(prediction)})
