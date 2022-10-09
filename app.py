@@ -9,7 +9,6 @@ from flask import jsonify
 app = Flask(__name__)
 model = pickle.load(open('models/model.pkl', 'rb'))
 # mongo.init_aopp(app)
-# app.config['MONGO_URI'] = 'mongodb+srv://IT19217796:ITMyotsoI7q98uHz@sliit-api.rrnov.mongodb.net/?retryWrites=true&w=majority'
 # picFolder = os.path.join('static', 'pics')
 # app.config['UPLOAD_FOLDER'] = picFolder
 
